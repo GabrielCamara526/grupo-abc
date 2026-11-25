@@ -1,0 +1,549 @@
+/* =========================================
+   VARIÁVEIS E CONFIGURAÇÕES GLOBAIS
+   ========================================= */
+:root {
+  --abc-red: #C8102E;
+  --abc-red-dark: #9B0B22;
+  --abc-red-soft: rgba(200, 16, 46, 0.08);
+  --abc-gray-900: #1F2328;
+  --abc-gray-700: #495057;
+  --abc-gray-500: #6C757D;
+  --abc-gray-200: #E5E7EB;
+  --abc-gray-100: #F4F5F7;
+  --abc-white: #FFFFFF;
+  --shadow-soft: 0 6px 20px rgba(31, 35, 40, 0.07);
+  --shadow-hover: 0 12px 28px rgba(31, 35, 40, 0.14);
+  --radius-md: 14px;
+  --radius-lg: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--abc-gray-100);
+  color: var(--abc-gray-900);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+h1, h2, h3, h4, h5, .navbar-brand {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+/* =========================================
+   NAVBAR E MENU SANDUÍCHE (OFFCANVAS)
+   ========================================= */
+.abc-navbar {
+  background-color: var(--abc-white);
+  border-bottom: 3px solid var(--abc-red);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  padding: 0.75rem 0;
+}
+
+.navbar-logo {
+  height: 48px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  display: block;
+}
+
+.btn-menu-sandwich {
+  border: 2px solid var(--abc-gray-200);
+  background-color: var(--abc-white);
+  color: var(--abc-gray-900);
+  border-radius: 10px;
+  padding: 0.45rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+}
+
+.btn-menu-sandwich:hover,
+.btn-menu-sandwich:focus {
+  border-color: var(--abc-red);
+  color: var(--abc-red);
+  background-color: var(--abc-red-soft);
+}
+
+.abc-offcanvas {
+  background-color: var(--abc-gray-900);
+  color: var(--abc-white);
+}
+
+.abc-offcanvas .offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.abc-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.abc-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.9rem 1rem;
+  color: #E5E7EB;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 500;
+  margin-bottom: 0.35rem;
+  transition: all 0.2s ease;
+}
+
+.abc-nav-link i {
+  font-size: 1.15rem;
+  color: var(--abc-red);
+}
+
+.abc-nav-link:hover,
+.abc-nav-link.active {
+  background-color: var(--abc-red);
+  color: var(--abc-white);
+  transform: translateX(4px);
+}
+
+.abc-nav-link:hover i,
+.abc-nav-link.active i {
+  color: var(--abc-white);
+}
+
+/* =========================================
+   INDEX: CARROSSEL 3 BANNERS (500px) E CULTURA
+   ========================================= */
+.hero-banner-img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  object-position: center;
+  background-color: #D1D5DB;
+  display: block;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--abc-white);
+  opacity: 0.65;
+}
+
+.carousel-indicators .active {
+  background-color: var(--abc-red);
+  opacity: 1;
+}
+
+.cultura-box {
+  background-color: var(--abc-white);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-soft);
+  border-left: 5px solid var(--abc-red);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cultura-img {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  background-color: #D1D5DB;
+}
+
+/* =========================================
+   TÍTULOS DE PÁGINA E BADGES
+   ========================================= */
+.page-header {
+  border-bottom: 2px solid var(--abc-gray-200);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.page-title {
+  color: var(--abc-gray-900);
+  position: relative;
+  display: inline-block;
+}
+
+.page-title::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  background-color: var(--abc-red);
+  border-radius: 2px;
+  margin-top: 0.45rem;
+}
+
+.tag-red {
+  display: inline-block;
+  background-color: var(--abc-red-soft);
+  color: var(--abc-red);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.7rem;
+  border-radius: 50px;
+  margin-bottom: 0.75rem;
+}
+
+/* =========================================
+   NOTÍCIAS (ESTILO PORTAL G1)
+   ========================================= */
+.news-banner-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  background-image: none;
+  display: block;
+}
+
+.news-section {
+  margin-bottom: 2rem;
+}
+
+.news-thumb {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: #D1D5DB;
+  transition: transform 0.3s ease;
+}
+
+.news-section:hover .news-thumb {
+  transform: scale(1.02);
+}
+
+.news-text-box {
+  background-color: var(--abc-white);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(31, 35, 40, 0.06);
+  height: 100%;
+  border-top: 3px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.news-section:hover .news-text-box {
+  border-top-color: var(--abc-red);
+  box-shadow: var(--shadow-hover);
+}
+
+.news-text-box h3 {
+  color: var(--abc-red);
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.news-text-box p {
+  color: var(--abc-gray-700);
+  line-height: 1.65;
+  margin-bottom: 0;
+}
+
+/* =========================================
+   GENTE & CULTURA (HOVER / TOQUE REVELA TEXTO)
+   ========================================= */
+.gente-card-block {
+  max-width: 820px;
+  margin: 0 auto 3rem auto;
+}
+
+.gente-card-title {
+  color: var(--abc-gray-900);
+  margin-bottom: 0.85rem;
+  padding-left: 0.75rem;
+  border-left: 4px solid var(--abc-red);
+}
+
+.gente-image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  background-color: #D1D5DB;
+}
+
+.gente-image-wrapper img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.gente-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(25, 25, 28, 0.94) 0%,
+    rgba(200, 16, 46, 0.82) 100%
+  );
+  color: var(--abc-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.gente-overlay p {
+  max-width: 580px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.gente-image-wrapper:hover img,
+.gente-image-wrapper.is-open img {
+  transform: scale(1.06);
+}
+
+.gente-image-wrapper:hover .gente-overlay,
+.gente-image-wrapper.is-open .gente-overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gente-hint {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  background-color: rgba(31, 35, 40, 0.78);
+  color: var(--abc-white);
+  font-size: 0.78rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.gente-image-wrapper:hover .gente-hint,
+.gente-image-wrapper.is-open .gente-hint {
+  opacity: 0;
+}
+
+/* =========================================
+   SERVIÇOS AO COLABORADOR
+   ========================================= */
+.servicos-banner {
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  background-color: #D1D5DB;
+}
+
+.service-card {
+  background-color: var(--abc-white);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--abc-gray-200);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--abc-red);
+  box-shadow: var(--shadow-hover);
+}
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background-color: var(--abc-red-soft);
+  color: var(--abc-red);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn-abc {
+  background-color: var(--abc-red);
+  color: var(--abc-white);
+  border: none;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 0.6rem 1.2rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-abc:hover,
+.btn-abc:focus {
+  background-color: var(--abc-red-dark);
+  color: var(--abc-white);
+  transform: translateY(-1px);
+}
+
+/* =========================================
+   SEGURANÇA & OPERAÇÃO (CAIXAS DE PDF)
+   ========================================= */
+.pdf-card {
+  background-color: var(--abc-white);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  border-left: 5px solid var(--abc-red);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  transition: all 0.25s ease;
+}
+
+@media (min-width: 768px) {
+  .pdf-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.pdf-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateX(4px);
+}
+
+.pdf-icon-box {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 12px;
+  background-color: var(--abc-red-soft);
+  color: var(--abc-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+}
+
+/* =========================================
+   FOOTER COMUM
+   ========================================= */
+.abc-footer {
+  background-color: var(--abc-gray-900);
+  color: #D1D5DB;
+  border-top: 4px solid var(--abc-red);
+  margin-top: 4rem;
+}
+
+.footer-logo {
+  height: 54px;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+.footer-nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+
+.footer-nav-links a {
+  color: #E5E7EB;
+  text-decoration: none;
+  font-size: 0.92rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.footer-nav-links a:hover {
+  color: var(--abc-red);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.85rem;
+  color: #9CA3AF;
+}
+
+/*temporário*/
+@media (min-width: 992px) {
+  .hero-banner-img,
+  .news-banner-img,
+  .servicos-banner {
+    height: 400px;    
+    object-fit: contain;
+    object-fit: contain;
+    background-color: var(--abc-gray-900);
+    background-image:
+      linear-gradient(rgba(17, 24, 39, 0.82), rgba(17, 24, 39, 0.82)),
+      url('../img/logo.png');
+    background-repeat: no-repeat, space;
+    background-size: cover, 100px auto;
+    background-position: center;
+  }
+
+  .servicos-banner {
+    height: 360px;
+  }
+}
+
+.titulo-colaborador {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--abc-red-dark);
+  text-align: center;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 400px) {
+  .navbar-logo {
+    height: 36px;
+  }
+
+  .titulo-colaborador {
+    font-size: 0.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .titulo-colaborador {
+    font-size: 1.15rem;
+  }
+}

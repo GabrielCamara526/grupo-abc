@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços ao Colaborador | Portal Interno Grupo ABC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR COMUM -->
+    <header class="sticky-top">
+        <nav class="navbar abc-navbar">
+            <div class="container d-flex align-items-center justify-content-between gap-2">
+                <a class="navbar-brand p-0 m-0" href="index.html">
+                    <img src="img/logo.png" alt="Logo Grupo ABC" class="navbar-logo">
+                </a>
+
+                <span class="titulo-colaborador">Espaço do Colaborador</span>
+
+                <button class="btn-menu-sandwich" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#menuPrincipalABC" aria-controls="menuPrincipalABC" aria-label="Abrir menu">
+                    <i class="bi bi-list fs-4"></i>
+                    <span class="d-none d-sm-inline">Menu</span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="offcanvas offcanvas-end abc-offcanvas" tabindex="-1" id="menuPrincipalABC"
+            aria-labelledby="menuPrincipalABCLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="menuPrincipalABCLabel">Portal Grupo ABC</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Fechar"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="abc-nav-list">
+                    <li><a href="index.html" class="abc-nav-link"><i class="bi bi-house-door-fill"></i> Início</a></li>
+                    <li><a href="noticias.html" class="abc-nav-link"><i class="bi bi-newspaper"></i> Notícias ABC</a>
+                    </li>
+                    <li><a href="gente.html" class="abc-nav-link"><i class="bi bi-people-fill"></i> Gente &amp;
+                            Cultura</a></li>
+                    <li><a href="servicos.html" class="abc-nav-link active"><i class="bi bi-grid-1x2-fill"></i> Serviços
+                            ao Colaborador</a></li>
+                    <li><a href="https://gruposuperabc.jobs.recrut.ai/" target="_blank" rel="noopener noreferrer"
+                            class="abc-nav-link"><i class="bi bi-graph-up-arrow"></i> Cresça no ABC</a></li>
+                    <li><a href="Seguranca.html" class="abc-nav-link"><i class="bi bi-shield-check"></i> Segurança &amp;
+                            Operação</a></li>
+                    <li><a href="servicos.html#beneficios" class="abc-nav-link"><i class="bi bi-award-fill"></i> Clube
+                            de Vantagens</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main class="container py-5">
+        <!-- TÍTULO H1 -->
+        <div class="page-header">
+            <span class="tag-red">Autoatendimento RH</span>
+            <h1 class="page-title mb-0">Serviços ao Colaborador</h1>
+        </div>
+
+        <!-- IMAGEM PRINCIPAL DE SERVIÇOS -->
+        <div class="mb-5">
+            <img src="img/servicos.jpg" alt="Serviços ao Colaborador Grupo ABC" class="servicos-banner">
+        </div>
+
+        <!-- SISTEMA VISUAL DE SOLICITAÇÃO DE SERVIÇOS -->
+        <div class="row g-4">
+            <!-- 1. Entrega de Atestado -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon"><i class="bi bi-file-earmark-medical"></i></div>
+                        <h3 class="h5 mb-2">Entrega de Atestado</h3>
+                        <p class="text-secondary small">Envie seu atestado médico de forma rápida e digital para o
+                            Departamento Pessoal.</p>
+                    </div>
+                    <button class="btn btn-abc w-100 mt-3" data-bs-toggle="modal" data-bs-target="#serviceModal"
+                        data-service="atestado">
+                        Solicitar / Enviar
+                    </button>
+                </div>
+            </div>
+
+            <!-- 2. Holerite -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon"><i class="bi bi-receipt"></i></div>
+                        <h3 class="h5 mb-2">Acesso Rápido ao Holerite</h3>
+                        <p class="text-secondary small">Consulte e faça o download dos seus demonstrativos mensais de
+                            pagamento.</p>
+                    </div>
+                    <button class="btn btn-abc w-100 mt-3" data-bs-toggle="modal" data-bs-target="#serviceModal"
+                        data-service="holerite">
+                        Acessar Holerite
+                    </button>
+                </div>
+            </div>
+
+            <!-- 3. Espelho de Ponto -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon"><i class="bi bi-clock-history"></i></div>
+                        <h3 class="h5 mb-2">Espelho de Ponto</h3>
+                        <p class="text-secondary small">Acompanhe seus registros de entrada, saída, horas extras e saldo
+                            de banco de horas.</p>
+                    </div>
+                    <button class="btn btn-abc w-100 mt-3" data-bs-toggle="modal" data-bs-target="#serviceModal"
+                        data-service="ponto">
+                        Consultar Ponto
+                    </button>
+                </div>
+            </div>
+
+            <!-- 4. Informe de Rendimentos -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon"><i class="bi bi-file-earmark-bar-graph"></i></div>
+                        <h3 class="h5 mb-2">Informe de Rendimentos</h3>
+                        <p class="text-secondary small">Emita o informe anual necessário para a declaração do Imposto de
+                            Renda.</p>
+                    </div>
+                    <button class="btn btn-abc w-100 mt-3" data-bs-toggle="modal" data-bs-target="#serviceModal"
+                        data-service="rendimentos">
+                        Emitir Informe
+                    </button>
+                </div>
+            </div>
+
+            <!-- 5. Calendário de Pagamento -->
+            <div class="col-12 col-md-6 col-lg-4">
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon"><i class="bi bi-calendar-check"></i></div>
+                        <h3 class="h5 mb-2">Calendário de Pagamento</h3>
+                        <p class="text-secondary small">Veja as datas de salários, adiantamentos, recarga de benefícios
+                            e 13º salário.</p>
+                    </div>
+                    <button class="btn btn-abc w-100 mt-3" data-bs-toggle="modal" data-bs-target="#serviceModal"
+                        data-service="calendario">
+                        Ver Calendário
+                    </button>
+                </div>
+            </div>
+
+            <!-- 6. Benefícios -->
+            <div class="col-12 col-md-6 col-lg-4" id="beneficios">
+                <div class="service-card">
+                    <div>
+                        <div class="service-icon"><i class="bi bi-heart-pulse"></i></div>
+                        <h3 class="h5 mb-2">Benefícios e Convênios</h3>
+                        <p class="text-secondary small">Vale-alimentação, plano de saúde, convênios e vantagens
+                            exclusivas para você.</p>
+                    </div>
+                    <button class="btn btn-abc w-100 mt-3" data-bs-toggle="modal" data-bs-target="#serviceModal"
+                        data-service="beneficios">
+                        Gerenciar Benefícios
+                    </button>
+                </div>
+            </div>
+
+            <!-- 7. Abertura de Chamados com o RH -->
+            <div class="col-12">
+                <div class="service-card border-danger">
+                    <div class="row align-items-center g-3">
+                        <div class="col-12 col-md-8 d-flex align-items-start gap-3">
+                            <div class="service-icon mb-0 flex-shrink-0"><i class="bi bi-headset"></i></div>
+                            <div>
+                                <h3 class="h5 mb-1">Abertura de Chamados com o RH</h3>
+                                <p class="text-secondary small mb-0">
+                                    Dúvidas sobre férias, cadastro, folha ou solicitações especiais? Abra um chamado
+                                    diretamente com nossa equipe.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 text-md-end">
+                            <button class="btn btn-abc w-100 w-md-auto px-4" data-bs-toggle="modal"
+                                data-bs-target="#serviceModal" data-service="chamado">
+                                Abrir Chamado RH
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- MODAL VISUAL DE SOLICITAÇÃO -->
+    <div class="modal fade" id="serviceModal" tabindex="-1" aria-labelledby="serviceModalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg rounded-4">
+                <div class="modal-header bg-dark text-white rounded-top-4">
+                    <h5 class="modal-title" id="serviceModalTitle">Solicitação de Serviço</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <p id="serviceModalDescription" class="text-secondary small mb-3"></p>
+
+                    <form id="serviceRequestForm">
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Nome Completo</label>
+                            <input type="text" class="form-control" placeholder="Digite seu nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Matrícula / CPF</label>
+                            <input type="text" class="form-control" placeholder="Informe sua matrícula ou CPF" required>
+                        </div>
+
+                        <!-- Campos dinâmicos por serviço -->
+                        <div id="serviceExtraFields"></div>
+
+                        <button type="submit" class="btn btn-abc w-100 mt-2">Confirmar Solicitação</button>
+                    </form>
+
+                    <div id="serviceFeedback" class="alert alert-success text-center d-none mb-0"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER COMUM -->
+    <footer class="abc-footer pt-5 pb-4">
+        <div class="container">
+            <div class="row gy-4 align-items-center">
+                <div class="col-12 col-lg-4">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="Logo Grupo ABC" class="footer-logo">
+                    </a>
+                </div>
+                <div class="col-12 col-lg-8">
+                    <ul class="footer-nav-links justify-content-lg-end">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="noticias.html">Notícias ABC</a></li>
+                        <li><a href="gente.html">Gente &amp; Cultura</a></li>
+                        <li><a href="servicos.html">Serviços ao Colaborador</a></li>
+                        <li><a href="https://gruposuperabc.jobs.recrut.ai/" target="_blank"
+                                rel="noopener noreferrer">Cresça no ABC</a></li>
+                        <li><a href="Seguranca.html">Segurança &amp; Operação</a></li>
+                        <li><a href="servicos.html#beneficios">Clube de Vantagens</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom mt-4 pt-3 text-center text-lg-start">
+                © 2026 Grupo ABC — Portal Exclusivo de Comunicação Interna e Endomarketing.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notícias ABC | Portal Interno Grupo ABC</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR COMUM -->
+    <header class="sticky-top">
+        <nav class="navbar abc-navbar">
+            <div class="container d-flex align-items-center justify-content-between gap-2">
+                <a class="navbar-brand p-0 m-0" href="index.html">
+                    <img src="img/logo.png" alt="Logo Grupo ABC" class="navbar-logo">
+                </a>
+
+                <span class="titulo-colaborador">Espaço do Colaborador</span>
+
+                <button class="btn-menu-sandwich" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#menuPrincipalABC" aria-controls="menuPrincipalABC" aria-label="Abrir menu">
+                    <i class="bi bi-list fs-4"></i>
+                    <span class="d-none d-sm-inline">Menu</span>
+                </button>
+            </div>
+        </nav>
+
+        <div class="offcanvas offcanvas-end abc-offcanvas" tabindex="-1" id="menuPrincipalABC"
+            aria-labelledby="menuPrincipalABCLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="menuPrincipalABCLabel">Portal Grupo ABC</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Fechar"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="abc-nav-list">
+                    <li><a href="index.html" class="abc-nav-link"><i class="bi bi-house-door-fill"></i> Início</a></li>
+                    <li><a href="noticias.html" class="abc-nav-link active"><i class="bi bi-newspaper"></i> Notícias
+                            ABC</a></li>
+                    <li><a href="gente.html" class="abc-nav-link"><i class="bi bi-people-fill"></i> Gente &amp;
+                            Cultura</a></li>
+                    <li><a href="servicos.html" class="abc-nav-link"><i class="bi bi-grid-1x2-fill"></i> Serviços ao
+                            Colaborador</a></li>
+                    <li><a href="https://gruposuperabc.jobs.recrut.ai/" target="_blank" rel="noopener noreferrer"
+                            class="abc-nav-link"><i class="bi bi-graph-up-arrow"></i> Cresça no ABC</a></li>
+                    <li><a href="Seguranca.html" class="abc-nav-link"><i class="bi bi-shield-check"></i> Segurança &amp;
+                            Operação</a></li>
+                    <li><a href="servicos.html#beneficios" class="abc-nav-link"><i class="bi bi-award-fill"></i> Clube
+                            de Vantagens</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- TÍTULO H1 -->
+        <div class="container pt-4 pb-3">
+            <span class="tag-red">Jornalismo Interno</span>
+            <h1 class="page-title mb-0">Notícias ABC</h1>
+        </div>
+
+        <!-- BANNER ÚNICO (100% LARGURA x 400px ALTURA) -->
+        <div class="mb-5">
+            <img src="img/banner_noticia.jpg" alt="Banner Principal de Notícias ABC" class="news-banner-img">
+        </div>
+
+        <!-- 4 SECTIONS DE NOTÍCIAS (COL-4 IMAGEM + COL-8 TEXTO COM SOMBRA LEVE) -->
+        <div class="container">
+            <!-- Notícia 1 -->
+            <section class="news-section">
+                <div class="row g-4 align-items-center">
+                    <div class="col-12 col-md-4">
+                        <img src="img/n1.jpg" alt="Notícia 1 Grupo ABC" class="news-thumb">
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <div class="news-text-box">
+                            <span class="tag-red">Destaque</span>
+                            <h3>Programa "Crescer ABC" abre inscrições para novas trilhas de capacitação</h3>
+                            <p>
+                                A partir desta semana, colaboradores dos supermercados, farmácias, auto postos e da
+                                matriz administrativa já podem se inscrever nos novos módulos de treinamento disponíveis
+                                diretamente no portal. A iniciativa oferece cursos rápidos, 100% gratuitos e com
+                                certificado, abrangendo temas como excelência no atendimento, gestão de tempo, liderança
+                                e ferramentas digitais. Além de apoiar o desenvolvimento pessoal, a conclusão das
+                                trilhas conta pontos extras nos processos de recrutamento interno para novas
+                                oportunidades de carreira dentro do Grupo ABC. </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Notícia 2 -->
+            <section class="news-section">
+                <div class="row g-4 align-items-center">
+                    <div class="col-12 col-md-4">
+                        <img src="img/n2.jpg" alt="Notícia 2 Grupo ABC" class="news-thumb">
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <div class="news-text-box">
+                            <span class="tag-red">Operações</span>
+                            <h3>Clube de Vantagens amplia benefícios nas Farmácias e Auto Postos do Grupo</h3>
+                            <p>
+                                Pensando na economia e no bem-estar diário da nossa equipe, o pacote de benefícios
+                                internos ganhou novidades importantes a partir deste mês. Agora, além das facilidades já
+                                existentes nas compras de supermercado, todos os profissionais ativos passam a contar
+                                com descontos ampliados em medicamentos e perfumaria nas Farmácias ABC, além de
+                                condições especiais no abastecimento e serviços dos nossos Auto Postos. Para utilizar o
+                                benefício, basta apresentar o cartão digital do colaborador no portal ou informar o CPF
+                                no momento do pagamento. </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Notícia 3 -->
+            <section class="news-section">
+                <div class="row g-4 align-items-center">
+                    <div class="col-12 col-md-4">
+                        <img src="img/n3.jpg" alt="Notícia 3 Grupo ABC" class="news-thumb">
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <div class="news-text-box">
+                            <span class="tag-red">Campanhas</span>
+                            <h3>Prêmio "Prata da Casa" reconhece os destaques em atendimento do último trimestre</h3>
+                            <p>
+                                O empenho de quem transforma a rotina das nossas unidades foi celebrado na edição mais
+                                recente do Prêmio Prata da Casa, que homenageou profissionais que se destacaram pelo
+                                espírito de equipe e pelos elogios recebidos de clientes e colegas. Nesta rodada, foram
+                                premiados representantes dos setores de frente de caixa, pista de abastecimento,
+                                atendimento farmacêutico e suporte administrativo. Os ganhadores participaram de um café
+                                especial com a diretoria e receberam certificados e vales-compra; a galeria com os nomes
+                                e as fotos da entrega já está disponível na aba "Comunidade". </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Notícia 4 -->
+            <section class="news-section">
+                <div class="row g-4 align-items-center">
+                    <div class="col-12 col-md-4">
+                        <img src="img/n4.jpg" alt="Notícia 4 Grupo ABC" class="news-thumb">
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <div class="news-text-box">
+                            <span class="tag-red">Comunicado</span>
+                            <h3>Semana de Saúde e Qualidade de Vida leva ações preventivas a todas as unidades</h3>
+                            <p>
+                                Entre os dias 10 e 14 do próximo mês, o Grupo ABC promove uma programação especial
+                                voltada para o cuidado físico e o equilíbrio emocional no ambiente de trabalho. As
+                                atividades foram adaptadas para a rotina de cada operação — da reposição de mercadorias
+                                ao escritório — e incluem sessões de ginástica laboral, aferição de pressão arterial,
+                                orientações sobre ergonomia e bate-papos com nutricionistas e psicólogos. A participação
+                                acontece durante o expediente em horários escalonados, e quem marcar presença nas ações
+                                concorre ao sorteio de kits de bem-estar. </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER COMUM -->
+    <footer class="abc-footer pt-5 pb-4">
+        <div class="container">
+            <div class="row gy-4 align-items-center">
+                <div class="col-12 col-lg-4">
+                    <a href="index.html">
+                        <img src="img/logo.png" alt="Logo Grupo ABC" class="footer-logo">
+                    </a>
+                </div>
+                <div class="col-12 col-lg-8">
+                    <ul class="footer-nav-links justify-content-lg-end">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="noticias.html">Notícias ABC</a></li>
+                        <li><a href="gente.html">Gente &amp; Cultura</a></li>
+                        <li><a href="servicos.html">Serviços ao Colaborador</a></li>
+                        <li><a href="https://gruposuperabc.jobs.recrut.ai/" target="_blank"
+                                rel="noopener noreferrer">Cresça no ABC</a></li>
+                        <li><a href="Seguranca.html">Segurança &amp; Operação</a></li>
+                        <li><a href="servicos.html#beneficios">Clube de Vantagens</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom mt-4 pt-3 text-center text-lg-start">
+                © 2026 Grupo ABC — Portal Exclusivo de Comunicação Interna e Endomarketing.
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
